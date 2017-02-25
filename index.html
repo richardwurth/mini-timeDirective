@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html ng-app="timeApp">
-  <head>
-    <meta charset="utf-8">
-    <title>Mini Time Directive</title>
-  </head>
-  <body ng-controller="mainCtrl">
-<div clickety-click><h1 style="font-family: monospace">Good morning, {{name}}!</h1></div>
+<head>
+  <meta charset="utf-8">
+  <title>Mini Time Directive</title>
+</head>
+<body ng-controller="mainCtrl">
+  <div><h1 style="font-family: monospace">Good morning, {{name}}!</h1></div>
 
-<show-time the-name="name"></show-time>
+  <show-time
+  ng-repeat="country in countries"
+  country-name="{{country.name}}"
+  country-tz="{{country.tz}}">
+</show-time>
 
 
 
@@ -19,5 +23,5 @@
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/mainCtrl.js"></script>
 <script type="text/javascript" src="js/timeDirective.js"></script>
-  </body>
+</body>
 </html>
